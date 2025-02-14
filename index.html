@@ -55,10 +55,12 @@
 
   function checkGuess() {
 
-    let userGuess = guessField.value;
+    let userGuess = Number(guessField.value);
 
-    if (isNaN(userGuess) || userGuess <= 0 || userGuess > 100){
+    if (isNaN(userGuess) || userGuess <= 0 || userGuess > 100 || !Number.isInteger(userGuess)){
       alert('Por favor, ingresa un número válido entre 1 y 100.')
+      guessField.value = '';
+      guessField.focus();
     } 
     if(guessCount === 1) {
       guesses.textContent = 'Número aleatorio anterior: ';
