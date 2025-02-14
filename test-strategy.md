@@ -8,5 +8,5 @@ Los colores en cada anuncio "perdiste, adivinaste el numero" no estaban en su lu
 
 Se evualua nuevamente y se determina que existia un conflicto en la comparación del numero ya que lo tomaba como una cadena y no como un entero por lo que se ajusta  la validación del numero entre 1 y 100 se agrega el fragmento "|| !Number.isInteger(userGuess)"
 
-Si dato ingresado no se contara y se define de la siguiente manera "guessField.value = ''; guessField.focus(); return;"
+Si el dato ingresado no se encontara en el rangode este fragmento evitara que se agregue al contador "guessField.value = ''; guessField.focus(); return;"
 
